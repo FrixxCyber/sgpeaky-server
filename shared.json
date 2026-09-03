@@ -3,7 +3,7 @@
     "AdRankLimit": 35,
     "BannerSettings": {
       "Countries": [
-        "FI"
+        "HU"
       ],
       "UseBanners": false
     },
@@ -20,7 +20,7 @@
     "InterstitialSettings": {
       "CountrySettings": [
         {
-          "Country": "IN",
+          "Country": "HU",
           "DisableInterstitials": false,
           "IntervalSeconds": 100
         }
