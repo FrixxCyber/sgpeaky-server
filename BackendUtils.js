@@ -59,7 +59,7 @@ const BackendUtils = {
 class Database {
   constructor() {
     this.mongoUri = process.env.mongoUri;
-    this.dbName = 'StumbleSpark';
+    this.dbName = 'StumbleLife';
     this.client = null;
     this.db = null;
     this.collections = {
@@ -248,7 +248,7 @@ class UserModel {
   static async create(deviceId, platformData = {}) {
     const now = new Date();
     const userId = Math.floor(Math.random() * 1000);
-    const username = `SparkyPlayer<color=green><sup>#${userId}`;
+    const username = `LifePlayer<color=green><sup>#${userId}`;
 
     const user = {
       id: userId,
@@ -632,7 +632,7 @@ async function generatePhotonJwt(user) {
   };
 
   const secret = process.env.LeagueSalt;
-  const options = { expiresIn: '30d', issuer: 'StumbleLeaguePhoton' };
+  const options = { expiresIn: '30d', issuer: 'LifeLeaguePhoton' };
 
   return new Promise((resolve, reject) => {
     jwt.sign(payload, secret, options, (err, token) => {
@@ -1019,7 +1019,7 @@ class RoundController {
       if (round === '1') {
         placements[user.id] = 16;
         usersLastRound[user.id] = 1;
-        roundPayloads[1] = {
+        roundPayloads = {
           EliminatedPlayers: [user.id, ...Array(15).fill(0).map((_, i) => 1000 + i)],
           LevelId: levelIds[0],
           Placements: placements,
@@ -1029,7 +1029,7 @@ class RoundController {
       } else if (round === '2') {
         placements[user.id] = 8;
         usersLastRound[user.id] = 2;
-        roundPayloads[1] = {
+        roundPayloads = {
           EliminatedPlayers: [],
           LevelId: levelIds[0],
           Placements: placements,
@@ -1038,7 +1038,7 @@ class RoundController {
         };
         roundPayloads[2] = {
           EliminatedPlayers: [user.id, ...Array(7).fill(0).map((_, i) => 1000 + i)],
-          LevelId: levelIds[1],
+          LevelId: levelIds,
           Placements: placements,
           RoundMissionProgression: null,
           Type: "SoloRound"
@@ -1046,7 +1046,7 @@ class RoundController {
       } else if (round === '3') {
         placements[user.id] = 1;
         usersLastRound[user.id] = 3;
-        roundPayloads[1] = {
+        roundPayloads = {
           EliminatedPlayers: [],
           LevelId: levelIds[0],
           Placements: placements,
@@ -1055,7 +1055,7 @@ class RoundController {
         };
         roundPayloads[2] = {
           EliminatedPlayers: [],
-          LevelId: levelIds[1],
+          LevelId: levelIds,
           Placements: placements,
           RoundMissionProgression: null,
           Type: "SoloRound"
@@ -1906,14 +1906,14 @@ class TournamentXController {
       minVersion: "0.56",
       startTime: new Date(),
       endTime: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
-      nameKey: "Sparky 1v1",
-      descriptionKey: "Practice your skills in the Sparky 1v1 TournamentX! mode!",
+      nameKey: "Life 1v1",
+      descriptionKey: "Practice your skills in the Life 1v1 TournamentX! mode!",
       listItemBackgroundImage: "SharkTanic_Background_Image_Tournaments_Card",
       detailsPanelBackgroundImage: "SharkTanic_Background_Image_Tournaments",
-      prizeBannerColour: "#fd5d00",
-      headerColour: "#fd5d00",
-      mapListGradientColourTop: "#fd5d00",
-      mapListGradientColourBottom: "#6d0024",
+      prizeBannerColour: "#00fd5d",
+      headerColour: "#00fd5d",
+      mapListGradientColourTop: "#00fd5d",
+      mapListGradientColourBottom: "#006d24",
       listPriority: 1,
       minPlayers: 2,
       maxPlayers: 2,
@@ -1923,15 +1923,15 @@ class TournamentXController {
       entryCurrencyCost: 0,
       areEmotesRestricted: false,
       prohibitedEmotes: [8, 13, 55, 122, 123, 124],
-      detailsPanelBorderColourTop: "#800011",
+      detailsPanelBorderColourTop: "#008011",
       detailsPanelBorderColourBottom: "#000000",
       colourData: {
-        detailsPanelMainColour: "#660000",
-        detailsPanelBorderColour: "#3b0404",
-        headerGradientRight: "#41050d",
-        headerGradientLeft: "#5e0b0b",
+        detailsPanelMainColour: "#006600",
+        detailsPanelBorderColour: "#043b04",
+        headerGradientRight: "#05410d",
+        headerGradientLeft: "#0b5e0b",
         infoWidgetsGradientRight: "#c9d0d6",
-        infoWidgetsGradientLeft: "#9c7575",
+        infoWidgetsGradientLeft: "#759c75",
         infoWidgetsBorderColour: "#d7d8d8"
       },
       rounds: [
@@ -1960,14 +1960,14 @@ class TournamentXController {
       minVersion: "0.56",
       startTime: new Date(),
       endTime: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
-      nameKey: "Sparky 2v2 ",
-      descriptionKey: "Practice your skills in the Stumble Sparky 2v2 TournamentX! mode!",
+      nameKey: "Life 2v2 ",
+      descriptionKey: "Practice your skills in the Life Life 2v2 TournamentX! mode!",
       listItemBackgroundImage: "AbductedAvenue_Background_Image_Tournaments_Card",
       detailsPanelBackgroundImage: "Barbie_Background_Image_Tournaments",
-      prizeBannerColour: "#c40b0b",
-      headerColour: "#990000",
-      mapListGradientColourTop: "#990000",
-      mapListGradientColourBottom: "#990000",
+      prizeBannerColour: "#0bc40b",
+      headerColour: "#009900",
+      mapListGradientColourTop: "#009900",
+      mapListGradientColourBottom: "#009900",
       listPriority: 0,
       minPlayers: 4,
       maxPlayers: 4,
@@ -1977,16 +1977,16 @@ class TournamentXController {
       entryCurrencyCost: 0,
       areEmotesRestricted: false,
       prohibitedEmotes: [7],
-      detailsPanelBorderColourTop: "#990000",
-      detailsPanelBorderColourBottom: "#990000",
+      detailsPanelBorderColourTop: "#009900",
+      detailsPanelBorderColourBottom: "#009900",
       colourData: {
-        detailsPanelMainColour: "#990000",
-        detailsPanelBorderColour: "#990000",
-        headerGradientRight: "#990000",
-        headerGradientLeft: "#990000",
-        infoWidgetsGradientRight: "#990000",
-        infoWidgetsGradientLeft: "#990000",
-        infoWidgetsBorderColour: "#990000"
+        detailsPanelMainColour: "#009900",
+        detailsPanelBorderColour: "#009900",
+        headerGradientRight: "#009900",
+        headerGradientLeft: "#009900",
+        infoWidgetsGradientRight: "#009900",
+        infoWidgetsGradientLeft: "#009900",
+        infoWidgetsBorderColour: "#009900"
       },
       rounds: [
         {
