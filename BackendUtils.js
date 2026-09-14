@@ -1945,10 +1945,10 @@ class TournamentXController {
         }
       ],
       awards: [
-            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 1, type: "XP", amount: 200 },
+            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 1, type: "CROWNS", amount: 1 },
             { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 2, type: "TROPHIES", amount: 15 },
-            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 3, type: "TOURNAMENTXP", amount: 50 },
-            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 4, type: "CROWNS", amount: 1 }
+            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 3, type: "TOURNAMENTXP", amount: 0 },
+            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 4, type: "CROWNS", amount: 0 }
           ],
       players: [],
       partys: []
@@ -1960,8 +1960,8 @@ class TournamentXController {
       minVersion: "0.56",
       startTime: new Date(),
       endTime: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
-      nameKey: "Peaky 2v2 ",
-      descriptionKey: "Practice your skills in the Peaky 2v2 TournamentX! mode!",
+      nameKey: "Peaky 1v1 ",
+      descriptionKey: "Practice your skills in the Peaky 1v1 TournamentX! mode!",
       listItemBackgroundImage: "AbductedAvenue_Background_Image_Tournaments_Card",
       detailsPanelBackgroundImage: "Barbie_Background_Image_Tournaments",
       prizeBannerColour: "#00BFFF",
@@ -1975,7 +1975,7 @@ class TournamentXController {
       minMatchmakingSeconds: 2,
       entryCurrencyType: "gems",
       entryCurrencyCost: 0,
-      areEmotesRestricted: false,
+      areEmotesRestricted: true,
       prohibitedEmotes: [7],
       detailsPanelBorderColourTop: "#1E90FF",
       detailsPanelBorderColourBottom: "#1E90FF",
@@ -1999,10 +1999,10 @@ class TournamentXController {
         }
       ],
       awards: [
-            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 1, type: "XP", amount: 200 },
+            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 1, type: "CROWNS", amount: 1 },
             { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 2, type: "TROPHIES", amount: 15 },
-            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 3, type: "TOURNAMENTXP", amount: 50 },
-            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 4, type: "CROWNS", amount: 1 }
+            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 3, type: "TOURNAMENTXP", amount: 0 },
+            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 4, type: "CROWNS", amount: 0 }
           ],
       players: [],
       partys: []
