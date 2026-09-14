@@ -59,7 +59,7 @@ const BackendUtils = {
 class Database {
   constructor() {
     this.mongoUri = process.env.mongoUri;
-    this.dbName = 'StumbleLife';
+    this.dbName = 'StumblePeaky';
     this.client = null;
     this.db = null;
     this.collections = {
@@ -248,7 +248,7 @@ class UserModel {
   static async create(deviceId, platformData = {}) {
     const now = new Date();
     const userId = Math.floor(Math.random() * 1000);
-    const username = `LifePlayer<color=green><sup>#${userId}`;
+    const username = `PeakyPlayer<color=#87CEEB><sup>#${userId}`;
 
     const user = {
       id: userId,
@@ -632,7 +632,7 @@ async function generatePhotonJwt(user) {
   };
 
   const secret = process.env.LeagueSalt;
-  const options = { expiresIn: '30d', issuer: 'LifeLeaguePhoton' };
+  const options = { expiresIn: '30d', issuer: 'PeakyLeaguePhoton' };
 
   return new Promise((resolve, reject) => {
     jwt.sign(payload, secret, options, (err, token) => {
@@ -1036,7 +1036,7 @@ class RoundController {
           RoundMissionProgression: null,
           Type: "SoloRound"
         };
-        roundPayloads[2] = {
+        roundPayloads = {
           EliminatedPlayers: [user.id, ...Array(7).fill(0).map((_, i) => 1000 + i)],
           LevelId: levelIds,
           Placements: placements,
@@ -1053,16 +1053,16 @@ class RoundController {
           RoundMissionProgression: null,
           Type: "SoloRound"
         };
-        roundPayloads[2] = {
+        roundPayloads = {
           EliminatedPlayers: [],
           LevelId: levelIds,
           Placements: placements,
           RoundMissionProgression: null,
           Type: "SoloRound"
         };
-        roundPayloads[3] = {
+        roundPayloads = {
           EliminatedPlayers: [],
-          LevelId: levelIds[2],
+          LevelId: levelIds,
           Placements: placements,
           RoundMissionProgression: null,
           Type: "SoloRound"
@@ -1910,10 +1910,10 @@ class TournamentXController {
       descriptionKey: "Practice your skills in the Peaky 1v1 TournamentX! mode!",
       listItemBackgroundImage: "SharkTanic_Background_Image_Tournaments_Card",
       detailsPanelBackgroundImage: "SharkTanic_Background_Image_Tournaments",
-      prizeBannerColour: "#00fd5d",
-      headerColour: "#00fd5d",
-      mapListGradientColourTop: "#00fd5d",
-      mapListGradientColourBottom: "#006d24",
+      prizeBannerColour: "#00BFFF",
+      headerColour: "#00BFFF",
+      mapListGradientColourTop: "#00BFFF",
+      mapListGradientColourBottom: "#4682B4",
       listPriority: 1,
       minPlayers: 2,
       maxPlayers: 2,
@@ -1923,15 +1923,15 @@ class TournamentXController {
       entryCurrencyCost: 0,
       areEmotesRestricted: false,
       prohibitedEmotes: [8, 13, 55, 122, 123, 124],
-      detailsPanelBorderColourTop: "#008011",
+      detailsPanelBorderColourTop: "#4682B4",
       detailsPanelBorderColourBottom: "#000000",
       colourData: {
-        detailsPanelMainColour: "#006600",
-        detailsPanelBorderColour: "#043b04",
-        headerGradientRight: "#05410d",
-        headerGradientLeft: "#0b5e0b",
+        detailsPanelMainColour: "#1E90FF",
+        detailsPanelBorderColour: "#4682B4",
+        headerGradientRight: "#4682B4",
+        headerGradientLeft: "#5c92ff",
         infoWidgetsGradientRight: "#c9d0d6",
-        infoWidgetsGradientLeft: "#759c75",
+        infoWidgetsGradientLeft: "#b0c4de",
         infoWidgetsBorderColour: "#d7d8d8"
       },
       rounds: [
@@ -1964,10 +1964,10 @@ class TournamentXController {
       descriptionKey: "Practice your skills in the Peaky 2v2 TournamentX! mode!",
       listItemBackgroundImage: "AbductedAvenue_Background_Image_Tournaments_Card",
       detailsPanelBackgroundImage: "Barbie_Background_Image_Tournaments",
-      prizeBannerColour: "#0bc40b",
-      headerColour: "#009900",
-      mapListGradientColourTop: "#009900",
-      mapListGradientColourBottom: "#009900",
+      prizeBannerColour: "#00BFFF",
+      headerColour: "#1E90FF",
+      mapListGradientColourTop: "#1E90FF",
+      mapListGradientColourBottom: "#1E90FF",
       listPriority: 0,
       minPlayers: 4,
       maxPlayers: 4,
@@ -1977,16 +1977,16 @@ class TournamentXController {
       entryCurrencyCost: 0,
       areEmotesRestricted: false,
       prohibitedEmotes: [7],
-      detailsPanelBorderColourTop: "#009900",
-      detailsPanelBorderColourBottom: "#009900",
+      detailsPanelBorderColourTop: "#1E90FF",
+      detailsPanelBorderColourBottom: "#1E90FF",
       colourData: {
-        detailsPanelMainColour: "#009900",
-        detailsPanelBorderColour: "#009900",
-        headerGradientRight: "#009900",
-        headerGradientLeft: "#009900",
-        infoWidgetsGradientRight: "#009900",
-        infoWidgetsGradientLeft: "#009900",
-        infoWidgetsBorderColour: "#009900"
+        detailsPanelMainColour: "#1E90FF",
+        detailsPanelBorderColour: "#1E90FF",
+        headerGradientRight: "#1E90FF",
+        headerGradientLeft: "#1E90FF",
+        infoWidgetsGradientRight: "#1E90FF",
+        infoWidgetsGradientLeft: "#1E90FF",
+        infoWidgetsBorderColour: "#1E90FF"
       },
       rounds: [
         {
