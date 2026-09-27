@@ -1922,7 +1922,7 @@ class TournamentXController {
       entryCurrencyType: "gems",
       entryCurrencyCost: 0,
       areEmotesRestricted: true,
-      prohibitedEmotes: [6, 9],
+      prohibitedEmotes: ["6", "9"],
       detailsPanelBorderColourTop: "#4682B4",
       detailsPanelBorderColourBottom: "#000000",
       colourData: {
