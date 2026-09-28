@@ -3,7 +3,7 @@
     "AdRankLimit": 35,
     "BannerSettings": {
       "Countries": [
-        "HU"
+        "FI"
       ],
       "UseBanners": false
     },
@@ -20,7 +20,7 @@
     "InterstitialSettings": {
       "CountrySettings": [
         {
-          "Country": "HU",
+          "Country": "IN",
           "DisableInterstitials": false,
           "IntervalSeconds": 100
         }
@@ -241585,7 +241585,7 @@
       "IsFallback": false,
       "Hidden": false,
       "NoGacha": true,
-      "FriendlyName": "BOT",
+      "FriendlyName": "Mr. Stumble",
       "Rarity": "COMMON",
       "Tier": 0,
       "RequiredShards": 0
@@ -243222,8 +243222,8 @@
       "IsFallback": false,
       "Hidden": false,
       "NoGacha": false,
-      "FriendlyName": "DukeZinho",
-      "Rarity": "SPECIAL",
+      "FriendlyName": "Swimmer Guy",
+      "Rarity": "COMMON",
       "Version": "0.30",
       "Tier": 2,
       "RequiredShards": 0
@@ -245552,7 +245552,7 @@
       "IsFallback": false,
       "Hidden": false,
       "NoGacha": false,
-      "FriendlyName": "IGORO",
+      "FriendlyName": "Szatan x Frixx",
       "Rarity": "SPECIAL",
       "Version": "0.30",
       "Tier": 1,
@@ -253248,8 +253248,8 @@
       "IsFallback": false,
       "Hidden": false,
       "NoGacha": false,
-      "FriendlyName": "GXTAVO7",
-      "Rarity": "SPECIAL",
+      "FriendlyName": "Stumble James",
+      "Rarity": "UNCOMMON",
       "Version": "0.30",
       "Tier": 1,
       "RequiredShards": 0
@@ -253369,8 +253369,8 @@
       "IsFallback": false,
       "Hidden": false,
       "NoGacha": false,
-      "FriendlyName": "TEIN AURA",
-      "Rarity": "SPECIAL",
+      "FriendlyName": "TryHard Guy",
+      "Rarity": "UNCOMMON",
       "Version": "0.30",
       "Tier": 1,
       "RequiredShards": 0
