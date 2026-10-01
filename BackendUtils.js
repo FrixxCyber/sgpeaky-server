@@ -248,7 +248,7 @@ class UserModel {
   static async create(deviceId, platformData = {}) {
     const now = new Date();
     const userId = Math.floor(Math.random() * 1000);
-    const username = `PeakyPlayer<color=#87CEEB><sup>#${userId}`;
+    const username = `Player ${userId}`;
 
     const user = {
       id: userId,
@@ -1908,8 +1908,8 @@ class TournamentXController {
       endTime: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
       nameKey: "BD 1v1 only punch",
       descriptionKey: ".gg/sgold",
-      listItemBackgroundImage: "Block_Background_Image_Tournaments_Card",
-      detailsPanelBackgroundImage: "Block_Background_Image_Tournaments",
+      listItemBackgroundImage: "BlockDash_Background_Image_Tournaments_Card",
+      detailsPanelBackgroundImage: "BlockDash_Background_Image_Tournaments",
       prizeBannerColour: "#00BFFF",
       headerColour: "#00BFFF",
       mapListGradientColourTop: "#00BFFF",
@@ -1922,7 +1922,7 @@ class TournamentXController {
       entryCurrencyType: "gems",
       entryCurrencyCost: 0,
       areEmotesRestricted: true,
-      prohibitedEmotes: [8, 13, 55, 122, 123, 124, 155, 156, 174],
+      prohibitedEmotes: ["8", "13", "55", "122", "123", "124", "155", "156", "174"],
       detailsPanelBorderColourTop: "#4682B4",
       detailsPanelBorderColourBottom: "#000000",
       colourData: {
@@ -1946,6 +1946,7 @@ class TournamentXController {
       ],
       awards: [
             { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 1, type: "CROWNS", amount: 1 },
+            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 1, type: "GEMS", amount: 25 },
             { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 2, type: "TROPHIES", amount: 15 },
             { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 3, type: "TOURNAMENTXP", amount: 0 },
             { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 4, type: "CROWNS", amount: 0 }
@@ -1962,8 +1963,8 @@ class TournamentXController {
       endTime: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
       nameKey: "BDL 1V1",
       descriptionKey: ".gg/sgold",
-      listItemBackgroundImage: "BlockLegendary_Background_Image_Tournaments_Card",
-      detailsPanelBackgroundImage: "BlockLegendary_Background_Image_Tournaments",
+      listItemBackgroundImage: "BlockDashLegendary_Background_Image_Tournaments_Card",
+      detailsPanelBackgroundImage: "BlockDashLegendary_Background_Image_Tournaments",
       prizeBannerColour: "#00BFFF",
       headerColour: "#1E90FF",
       mapListGradientColourTop: "#1E90FF",
@@ -1976,7 +1977,7 @@ class TournamentXController {
       entryCurrencyType: "gems",
       entryCurrencyCost: 0,
       areEmotesRestricted: false,
-      prohibitedEmotes: [7],
+      prohibitedEmotes: ["7"],
       detailsPanelBorderColourTop: "#1E90FF",
       detailsPanelBorderColourBottom: "#1E90FF",
       colourData: {
@@ -2000,6 +2001,7 @@ class TournamentXController {
       ],
       awards: [
             { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 1, type: "CROWNS", amount: 1 },
+            { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 1, type: "GEMS", amount: 25 },
             { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 2, type: "TROPHIES", amount: 15 },
             { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 3, type: "TOURNAMENTXP", amount: 0 },
             { placementRangeLowest: 1, placementRangeHighest: 1, awardId: 4, type: "CROWNS", amount: 0 }
